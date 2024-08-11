@@ -1,0 +1,6 @@
+@WebApplicationBookApp_HostAddress = http://localhost:5231
+
+GET {{WebApplicationBookApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
