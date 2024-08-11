@@ -18,7 +18,7 @@ namespace WebApplicationBookApp
         {
             if (!options.IsConfigured)
             {
-                var connectionString = _configuration.GetConnectionString("DefaultConnection");
+                var connectionString = _configuration.GetConnectionString("ConStr");
                 options.UseSqlServer(connectionString);
             }
         }
