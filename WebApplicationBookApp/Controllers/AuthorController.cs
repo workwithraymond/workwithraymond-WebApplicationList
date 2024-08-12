@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplicationBookApp.Controllers
 {
@@ -12,9 +13,12 @@ namespace WebApplicationBookApp.Controllers
             _context = context;
             _hostenv = hostenv;
         }
-        public IActionResult Index()
+
+        [HttpGet]
+        public async Task<IActionResult>GetAuthor()
         {
-            return View();
+            return Ok(await _context.Authors.ToListAsync());
         }
+       
     }
 }
